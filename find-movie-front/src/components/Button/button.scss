@@ -1,0 +1,14 @@
+.button {
+  width: 150px;
+  background-color: #e33c08;
+  border-color: #e33c08;
+  color: #221d21;
+  transition: 0.4s;
+
+  &:hover {
+    background-color: #f77014;
+    border-color: #f77014;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+  }
+}
