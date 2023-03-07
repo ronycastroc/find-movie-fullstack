@@ -1,6 +1,6 @@
 # FindMovie
 
-### Technologias utilizadas:
+### Tecnologias utilizadas:
 ```
 React + Redux | SCSS | UI5 Web Components | NodeJS | NestJS | TypeScript | Docker | Nginx
 ```
