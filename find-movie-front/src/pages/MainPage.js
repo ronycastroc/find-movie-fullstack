@@ -1,4 +1,4 @@
-import { Header, Footer, Title, Search } from '../components';
+import { Header, Footer, Title, Search, Movie } from '../components';
 
 export const MainPage = () => {
   return (
@@ -6,6 +6,7 @@ export const MainPage = () => {
       <Header />
       <Title />
       <Search />
+      <Movie />
       <Footer />
     </>
   );

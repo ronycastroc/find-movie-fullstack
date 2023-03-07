@@ -1,36 +1,41 @@
 import { Button } from '../Button/Button';
 import './search.scss';
 import { useDispatch } from 'react-redux';
-import { useRef } from 'react';
+import { useState } from 'react';
 import { getMovie } from '../../services/findMovieService';
 import { resetMovie, setMovie } from '../../store/actions';
 
 export const Search = () => {
-  const inputRef = useRef(null);
-  const dispatch = useDispatch();
+  const [movieTitle, setMovieTitle] = useState('');
+  const dispatch = useDispatch();  
 
   const handleSearch = async (e) => {
     e.preventDefault();
 
-    const title = inputRef.current.value;
+    if (movieTitle.length < 1) return alert("Field cannot be empty");
 
     try {
-      const movie = await getMovie(title);
+      const movie = await getMovie(movieTitle);
 
       dispatch(setMovie(movie));
-      inputRef.current.value = "";
+      setMovieTitle('');
     } catch (error) {
       console.log(error);
     }
   }
 
   const handleReset = () => {
-    dispatch(resetMovie);
+    dispatch(resetMovie());
   }
 
   return (
     <div className='search'>
-      <input type="text" name="search" required ref={inputRef}/>
+      <input 
+        type="text" 
+        name="search" 
+        value={movieTitle} 
+        onChange={(e) => setMovieTitle(e.target.value)} 
+        required/>
       <Button onClick={handleSearch}>Search</Button>
       <Button onClick={handleReset}>Reset</Button>
     </div>
