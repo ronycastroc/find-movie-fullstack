@@ -1,8 +1,9 @@
 import { NestFactory } from '@nestjs/core';
-import { AppModule } from './app.module';
+import { MoviesModule } from './modules/movie.module';
 
 async function bootstrap() {
-  const app = await NestFactory.create(AppModule);
-  await app.listen(3000);
+  const app = await NestFactory.create(MoviesModule);
+  await app.listen(5000);
+  console.log('Listening on 5000');
 }
 bootstrap();
