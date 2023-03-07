@@ -5,6 +5,10 @@
   color: #221d21;
   transition: 0.4s;
 
+  @media (max-width: 750px) {
+    margin-bottom: 10px;
+  }
+
   &:hover {
     background-color: #f77014;
     border-color: #f77014;

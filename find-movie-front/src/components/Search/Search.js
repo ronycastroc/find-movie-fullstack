@@ -7,7 +7,7 @@ import { resetMovie, setMovie } from '../../store/actions';
 
 export const Search = () => {
   const [movieTitle, setMovieTitle] = useState('');
-  const dispatch = useDispatch();  
+  const dispatch = useDispatch();
 
   const handleSearch = async (e) => {
     e.preventDefault();
@@ -30,14 +30,16 @@ export const Search = () => {
 
   return (
     <div className='search'>
-      <input 
-        type="text" 
-        name="search" 
-        value={movieTitle} 
-        onChange={(e) => setMovieTitle(e.target.value)} 
-        required/>
-      <Button onClick={handleSearch}>Search</Button>
-      <Button onClick={handleReset}>Reset</Button>
+      <input
+        type="text"
+        name="search"
+        value={movieTitle}
+        onChange={(e) => setMovieTitle(e.target.value)}
+        required />
+      <div className='buttons'>
+        <Button onClick={handleSearch}>Search</Button>
+        <Button onClick={handleReset}>Reset</Button>
+      </div>
     </div>
   );
 }

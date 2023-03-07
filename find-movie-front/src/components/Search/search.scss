@@ -7,8 +7,34 @@
   margin: 0 auto;
   margin-top: 20px;
 
+  @media (max-width: 750px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 100%;
+  }
+
   input {
     height: 70%;
     width: 300px;
+
+    @media (max-width: 750px) {
+      height: 40px;
+      width: 70vw;
+      margin-bottom: 20px;
+    }
+  }
+
+  .buttons {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    @media (max-width: 750px) {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+    }
   }
 }

@@ -6,8 +6,17 @@
   justify-content: center;
   padding-bottom: 100px;
 
+  @media (max-width: 750px) {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
   .info {
     width: 40%;
+
+    @media (max-width: 750px) {
+      width: 80%;
+    }
   }
 
   .poster {
@@ -15,6 +24,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media (max-width: 750px) {
+      margin-bottom: 20px;
+      width: 100%;
+      margin-top: -40px;
+    }
   }
 
   h1 {

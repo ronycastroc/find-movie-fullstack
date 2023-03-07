@@ -3,6 +3,10 @@
   margin: 0 auto;
   margin-top: 20px;
 
+  @media (max-width: 750px) {
+    width: 90%;
+  }
+
   h1 {
     color: #221d21;
     font-size: 1.5rem;
