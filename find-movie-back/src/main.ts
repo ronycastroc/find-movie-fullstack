@@ -3,6 +3,7 @@ import { MoviesModule } from './modules/movie.module';
 
 async function bootstrap() {
   const app = await NestFactory.create(MoviesModule);
+  app.enableCors();
   await app.listen(5000);
   console.log('Listening on 5000');
 }

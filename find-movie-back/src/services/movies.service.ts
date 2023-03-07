@@ -5,7 +5,7 @@ import axios from 'axios';
 export class MoviesService {
   async getMovieByTittle(title: string) {
     const response = await axios.get(
-      `http://www.omdbapi.com/?t=${title}&plot=full&apikey=3e4dbc70`,
+      `http://www.omdbapi.com/?t=${title}&apikey=3e4dbc70`,
     );
 
     return response.data;
