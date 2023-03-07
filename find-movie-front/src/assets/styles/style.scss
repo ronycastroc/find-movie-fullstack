@@ -1,11 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap');
 
+$light: #b7aea5;
+$medium: #433d3d;
+$dark: #221d21;
+$orange-light: #f77014;
+$orange-dark: #e33c08;
+
 * {
   box-sizing: border-box;
 }
 
 body {
-  background: #b7aea5;
+  background: $light;
   font-family: 'Roboto', sans-serif;
   min-height: 100vh;
   position: relative;
