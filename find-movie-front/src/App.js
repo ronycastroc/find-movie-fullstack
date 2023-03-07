@@ -1,7 +1,10 @@
 import { MainPage } from "./pages/MainPage";
+import { UserProvider } from "./provider/UserProvider";
 
 export const App = () => {
   return (
-    <MainPage />
+    <UserProvider>
+      <MainPage />
+    </UserProvider>    
   );
 }
